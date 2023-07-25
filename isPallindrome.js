@@ -1,24 +1,26 @@
-const isPallindrome = (str) => {
-  //clean up string to be just lowwercase letters with no spaces
-  let cleanedStr = "";
+const isPalindrome = (str) => {
+  //*clean up string
+  cleanedStr = "";
   for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
-    if ((char >= "a" && char <= "z") || (char >= "0") & (char <= "9")) {
+    const char = str[i].toLowerCase();
+    if ((char >= "a" && char <= "z") || (char >= "0" && char <= "9")) {
       cleanedStr += char;
     }
   }
-  console.log("cleanded string: ", cleanedStr);
-  //using the length attribute compare the first and last indexes working your way to the middle.
-  let frontIndex = 0;
-  let endIndex = cleanedStr.length - 1;
-  while (frontIndex < endIndex) {
-    if (cleanedStr[frontIndex] !== cleanedStr[endIndex]) {
-      return false;
-    }
-    frontIndex++;
-    endIndex--;
-  }
-  return true;
+  console.log("Cleaned string is ", cleanedStr);
+  // //*compare front to end and move towards middle
+  // let start = 0;
+  // let end = cleanedStr.length - 1;
+
+  // while (start < end) {
+  //   if (cleanedStr[start] !== cleanedStr[end]) {
+  //     return false;
+  //   }
+  //   start++;
+  //   end--;
+  // }
+  // return true;
+  return cleanedStr === cleanedStr.split("").reverse().join("") ? true : false;
 };
 
-console.log(isPallindrome("123e re5' 21"));
+console.log(isPalindrome("Grover Evorg^"));
