@@ -2,9 +2,8 @@
 // caesarCiper("axe and hatchet", 3) should produce "dah dqg kdwfkhw"
 
 const caesarCipher = (str, num) => {
-  // create a variable of ignored characters
   num = num % 26;
-  console.log("Clean num is: ", num);
+  // create a variable of ignored characters
   const ignoredChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"; //function will ignore these characters
   const lowerCaseStr = str.toLowerCase();
   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -44,4 +43,4 @@ const caesarCipher = (str, num) => {
   return newString;
 };
 
-console.log(caesarCipher("I came, I saw, I Conquered.", 30));
+console.log(caesarCipher("T nlxp, T dlh, T Nzybfpcpo.", 15));
