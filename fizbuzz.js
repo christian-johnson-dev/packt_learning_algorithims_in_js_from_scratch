@@ -1,5 +1,8 @@
 //? FIZZBUZZ -- A function is passed a number as a parameter. The function counts up to the number. If divisible by 3, the number is replaced with "Fizz". If the number is divisible by 5, it is replaced with "Buzz". If divisble by 15 then "Fizzbuzz."
 
+//* Time complexity O(n)
+//* Space Complexity 0(1)
+
 const fizzNum = 3;
 const buzzNum = 5;
 const fizzbuzzNum = 15;
