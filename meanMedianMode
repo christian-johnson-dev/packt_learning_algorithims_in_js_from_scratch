@@ -1,0 +1,36 @@
+const array = [9, 7, 2, 0, 3];
+
+const meanValue = (arr) => {
+  const total = arr.reduce((a, b) => a + b, 0);
+  return total / arr.length;
+};
+
+console.log("Mean value: ", meanValue(array));
+
+const medianValue = (arr) => {
+  arr.sort((a, b) => a - b);
+  if (arr.length % 2 === 1) {
+    return arr[Math.floor(arr.length / 2)];
+  } else {
+    const midIndex = arr.length / 2 - 1;
+    return (arr[midIndex] + arr[midIndex + 1]) / 2;
+  }
+};
+
+console.log("Median value: ", medianValue(array));
+
+const modeValue = (arr) => {
+  const modeObj = {};
+  let max = 0,
+    count = 0;
+
+  arr.forEach((arrNum) => {
+    if (!modeObj[arrNum]) {
+      modeObj[arrNum] = 0;
+    }
+    modeObj[arrNum]++;
+  });
+  console.log(modeObj);
+};
+
+modeValue(array);
